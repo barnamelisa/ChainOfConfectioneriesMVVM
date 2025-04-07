@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane fx:controller="com.example.tema2_ps_final.view.PrajituraView"
+          xmlns:fx="http://javafx.com/fxml"
+          hgap="10" vgap="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- Main layout with TableView on the left and input fields on the right -->
+    <HBox GridPane.columnSpan="2" spacing="10" HBox.hgrow="ALWAYS">
+        <!-- TableView on the left -->
+        <VBox>
+            <TableView fx:id="cakeTable" prefWidth="700">
+                <columns>
+                    <TableColumn text="Name" fx:id="numePrajituraColumn"/>
+                    <TableColumn text="Description" fx:id="descriereColumn"/>
+                    <TableColumn text="Cofetarie ID" fx:id="cofetarieIdColumn"/>
+                    <TableColumn text="Price" fx:id="pretColumn"/>
+                    <TableColumn text="Expiration Date" fx:id="dataExpirareColumn"/>
+                    <TableColumn text="Production Date" fx:id="dataProductieColumn"/>
+                    <TableColumn text="Image" fx:id="imagineColumn"/>
+                </columns>
+            </TableView>
+        </VBox>
+
+        <!-- Form on the right -->
+        <VBox spacing="10">
+            <Label text="Name:"/>
+            <TextField fx:id="numePrajituraField"/>
+
+            <Label text="Description:"/>
+            <TextField fx:id="descriereField"/>
+
+            <Label text="Cofetarie ID:"/>
+            <TextField fx:id="cofetarieIdField"/>
+
+            <Label text="Price:"/>
+            <TextField fx:id="pretField"/>
+
+            <Label text="Expiration Date:"/>
+            <TextField fx:id="dataExpirareField"/>
+
+            <Label text="Production Date:"/>
+            <TextField fx:id="dataProductieField"/>
+
+            <Label text="Image:"/>
+            <TextField fx:id="imagineField"/>
+
+            <!-- Search by Name -->
+            <Label text="Search by Name:"/>
+            <TextField fx:id="searchField" promptText="Enter name to search"/>
+            <Button fx:id="searchButton" text="Search by Name"/>
+
+            <!-- Search by Availability -->
+            <Label text="Search by Availability:"/>
+            <TextField fx:id="availabilityField" promptText="Enter Cofetarie ID"/>
+            <Button fx:id="availabilityButton" text="Search by Availability"/>
+
+            <!-- Search by Validity -->
+            <Label text="Search by Validity:"/>
+            <TextField fx:id="validityField" promptText="Enter Cofetarie ID"/>
+            <Button fx:id="validityButton" text="Search by Validity"/>
+
+            <!-- Action buttons -->
+            <HBox spacing="10">
+                <Button fx:id="addButton" text="Add Cake" />
+                <Button fx:id="updateButton" text="Update Cake" />
+                <Button fx:id="deleteButton" text="Delete Cake" />
+                <Button fx:id="clearFieldsButton" text="Clear Fields" />
+            </HBox>
+        </VBox>
+    </HBox>
+
+    <Label fx:id="messageLabel" GridPane.rowIndex="6" GridPane.columnSpan="2"/>
+</GridPane>

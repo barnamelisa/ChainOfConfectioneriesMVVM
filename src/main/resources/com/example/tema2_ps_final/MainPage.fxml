@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.tema2_ps_final.Main">
+    <children>
+        <VBox alignment="CENTER" spacing="20">
+            <Label text="Main Menu" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <HBox spacing="10">
+                <Button fx:id="cakesButton" text="Cakes" onAction="#handleCakesButton"/>
+                <Button fx:id="confectionariesButton" text="Confectionaries"/>
+                <Button fx:id="csvDocButton" text="CSV and Doc"/>
+            </HBox>
+        </VBox>
+    </children>
+</StackPane>
+
+
